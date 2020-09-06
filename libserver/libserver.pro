@@ -1,5 +1,6 @@
 include(../libglobal/libglobal.pri)
 include(../libdb/libdb.pri)
+include(../external_library/QXlsx/QXlsx/QXlsx.pri)
 
 TEMPLATE = lib
 TARGET = server
@@ -71,9 +72,11 @@ SOURCES += \
     util/itemutil.cpp \
     action/soldreturnaction.cpp \
     util/configutil.cpp \
-    action/configaction.cpp
+    action/configaction.cpp \
+    util/xlsxutil.cpp
 
-HEADERS += \ 
+HEADERS += \
+    util/xlsxutil.h \
     server_global.h \
     serveraction.h \
     router.h \
